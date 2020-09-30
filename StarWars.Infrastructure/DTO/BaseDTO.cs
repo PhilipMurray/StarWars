@@ -13,6 +13,9 @@ namespace StarWars.Infrastructure.DTO
         [JsonProperty("url")]
         public string Url { get; set; }
 
+        [JsonProperty("detail")]
+        public string Detail { get; set; }
+
         [JsonProperty("edited")]
         public DateTime Edited { get; set; }
 

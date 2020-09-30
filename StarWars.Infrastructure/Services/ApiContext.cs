@@ -25,8 +25,14 @@ namespace StarWars.Infrastructure.Services
 
             var response = _client.Execute(request);
 
-            return response.Content;
-
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return response.Content;
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
     }
 }
