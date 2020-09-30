@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace StarWars.Domain.Services
 {
@@ -10,6 +11,9 @@ namespace StarWars.Domain.Services
         public int? GetConsumablesInHours(string consumables)
         {
             if (string.IsNullOrEmpty(consumables))
+                return null;
+
+            if (!Regex.IsMatch(consumables, @"^\b\d\s\w+$", RegexOptions.IgnoreCase))
                 return null;
 
             var split = consumables.Split();
@@ -33,7 +37,7 @@ namespace StarWars.Domain.Services
                 case "day":
                     return (24 * 1) * Convert.ToInt32(split[0]);
                 default:
-                    return 0;
+                    return null;
             }
         }
 

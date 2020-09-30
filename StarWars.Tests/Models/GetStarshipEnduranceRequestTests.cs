@@ -9,14 +9,22 @@ namespace StarWars.Application.Models.Tests
     [TestClass()]
     public class GetStarshipEnduranceRequestTests
     {
+        private GetStarshipEnduranceRequest _getStarshipEnduranceRequest;
+
+        [TestInitialize()]
+        public void Init()
+        {
+            _getStarshipEnduranceRequest = new GetStarshipEnduranceRequest();
+        }
+
         [TestMethod()]
         public void GetMegalightsToTravelTest()
         {
             //// Arrange
-            var request = new GetStarshipEnduranceRequest(100);
+            _getStarshipEnduranceRequest = new GetStarshipEnduranceRequest(100);
 
             //// Act
-            var response = request.GetMegalightsToTravel();
+            var response = _getStarshipEnduranceRequest.GetMegalightsToTravel();
 
             //// Assert
             Assert.AreEqual(100, response);

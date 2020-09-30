@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using StarWars.Application.Interfaces;
 using StarWars.Application.Models;
 using StarWars.Application.Services;
 using StarWars.Domain.Interfaces;
@@ -13,7 +14,7 @@ namespace StarWars.Application.Services.Tests
     [TestClass()]
     public class StarWarsApplicationServiceTests
     {
-        private readonly StarWarsApplicationService _applicationService;
+        private readonly IStarWarsApplicationService _applicationService;
         private readonly Mock<IStarshipRepository> _starshipRepositoryMock;
         private readonly Mock<IStarshipResupplyCalculation> _starshipResupplyCalculationMock;
 

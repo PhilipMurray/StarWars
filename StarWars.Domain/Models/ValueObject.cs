@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
 namespace StarWars.Domain.Models
 {
+    [ExcludeFromCodeCoverage]
     public abstract class ValueObject
     {
         protected static bool EqualOperator(ValueObject left, ValueObject right)

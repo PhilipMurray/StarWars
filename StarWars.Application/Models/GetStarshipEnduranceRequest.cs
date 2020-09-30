@@ -8,6 +8,10 @@ namespace StarWars.Application.Models
     {
         private int _megalightsToTravel;
 
+        public GetStarshipEnduranceRequest()
+        {
+        }
+
         public GetStarshipEnduranceRequest(int megalightsToTravel)
         {
             if (megalightsToTravel <= 0)

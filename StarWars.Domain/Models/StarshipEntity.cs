@@ -13,9 +13,13 @@ namespace StarWars.Domain.Models
 
         public StarshipEntity(string name, string mGLT, string consumables)
         {
-            _name = string.IsNullOrEmpty(name) || Regex.Match(name, @"\b(unknown|n/a)\b").Success ? string.Empty : name;
+            _name = string.IsNullOrEmpty(name)
+                    || Regex.IsMatch(name, @"\b(unknown|n/a)\b", RegexOptions.IgnoreCase) ? string.Empty : name;
+
             _megalightsPerHour = new MegalightsPerHour(mGLT);
-            _consumables = string.IsNullOrEmpty(consumables) || Regex.Match(consumables, @"\b(unknown|n/a)\b").Success ? string.Empty : consumables;
+
+            _consumables = string.IsNullOrEmpty(consumables)
+                           || Regex.IsMatch(consumables, @"\b(unknown|n/a)\b", RegexOptions.IgnoreCase) ? string.Empty : consumables;
         }
 
         public string GetName()

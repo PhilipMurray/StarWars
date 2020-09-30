@@ -12,7 +12,7 @@ namespace StarWars.Domain.Models
         public MegalightsPerHour(string mglt)
         {
             Value = string.IsNullOrEmpty(mglt) ||
-                Regex.Match(mglt, @"\b(unknown|n/a)\b").Success ? string.Empty : mglt;            
+                Regex.IsMatch(mglt, @"\b(unknown|n/a)\b",RegexOptions.IgnoreCase) ? string.Empty : mglt;            
         }
 
         protected override IEnumerable<object> GetEqualityComponents()

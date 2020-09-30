@@ -1,5 +1,8 @@
-﻿namespace StarWars.Domain.Models
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace StarWars.Domain.Models
 {
+    [ExcludeFromCodeCoverage]
     public abstract class Entity
     {
         public virtual int Id { get; protected set; }
