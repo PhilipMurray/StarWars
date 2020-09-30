@@ -22,6 +22,8 @@ My approach to this was to create a simple console application that would call a
 2. Set **StarWars.ConsoleApp** as startup project.
 3. Press **F5**.
 
+![](img/screenshot1.png)
+
 ## Technologies
 
 * .NET Core 3.1
