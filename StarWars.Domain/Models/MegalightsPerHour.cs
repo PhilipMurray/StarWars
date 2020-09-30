@@ -11,7 +11,6 @@ namespace StarWars.Domain.Models
 
         public MegalightsPerHour(string mglt)
         {
-
             Value = string.IsNullOrEmpty(mglt) ||
                 Regex.Match(mglt, @"\b(unknown|n/a)\b").Success ? string.Empty : mglt;            
         }

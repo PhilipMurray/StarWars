@@ -2,7 +2,7 @@
 using StarWars.Application.Interfaces;
 using StarWars.Application.Services;
 
-namespace StarWars.Domain.Utils
+namespace StarWars.Application.Utils
 {
     public static class IServiceCollectionExtension
     {

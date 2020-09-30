@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using RestSharp;
 using StarWars.Domain.Interfaces;
 using StarWars.Infrastructure.Interfaces;
 using StarWars.Infrastructure.Repositories;
+using StarWars.Infrastructure.Services;
 using StarWars.Infrastructure.Utils.AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,7 @@ namespace StarWars.Infrastructure.Utils
         {
             services.AddScoped<IApiContext, ApiContext>();
             services.AddScoped<IStarshipRepository, StarshipRepository>();
+            services.AddScoped<IRestClient, RestClient>();
             return services;
         }
 

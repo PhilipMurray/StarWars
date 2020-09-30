@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StarWars.Infrastructure
+namespace StarWars.Infrastructure.Services
 {
     public class ApiContext : IApiContext
     {
@@ -13,9 +13,10 @@ namespace StarWars.Infrastructure
 
         readonly IRestClient _client;
 
-        public ApiContext()
+        public ApiContext(IRestClient restClient)
         {
-            _client = new RestClient(baseUri);
+            _client = restClient;
+            _client.BaseUrl = baseUri;
         }
 
         public string Get(string apiResource) 

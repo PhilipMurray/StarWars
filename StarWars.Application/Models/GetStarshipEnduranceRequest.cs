@@ -10,7 +10,7 @@ namespace StarWars.Application.Models
 
         public GetStarshipEnduranceRequest(int megalightsToTravel)
         {
-            if (megalightsToTravel < 0)
+            if (megalightsToTravel <= 0)
                 throw new ArgumentException($"{nameof(megalightsToTravel)} must be greater than 0.");
 
             _megalightsToTravel = megalightsToTravel;

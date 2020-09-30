@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using StarWars.Application.Interfaces;
 using StarWars.Application.Models;
+using StarWars.Application.Utils;
 using StarWars.Domain.Utils;
 using StarWars.Infrastructure.Utils;
 using System;
