@@ -1,4 +1,5 @@
 # StarWars
+![Build Status](https://github.com/PhilipMurray/StarWars/workflows/.NET%20Core/badge.svg)
 
 ## Project Overview
 This project consumes the popular star wars api https://swapi.dev/
